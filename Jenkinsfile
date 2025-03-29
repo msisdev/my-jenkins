@@ -9,7 +9,7 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/msisdev/my-jenkins.git'
+                git branch: 'master', url: 'https://github.com/msisdev/my-jenkins.git'
             }
         }
         
