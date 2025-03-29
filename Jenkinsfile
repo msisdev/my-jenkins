@@ -7,11 +7,11 @@ pipeline {
     }
 
     stages { 
-        stage('SCM Checkout') {
-            steps {
-                git branch: 'master', url: 'https://github.com/msisdev/my-jenkins.git'
-            }
-        }
+        // stage('SCM Checkout') {
+        //     steps {
+        //         git branch: 'master', url: 'https://github.com/msisdev/my-jenkins.git'
+        //     }
+        // }
 
         stage('Test') {
             steps {
