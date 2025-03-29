@@ -12,6 +12,12 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/msisdev/my-jenkins.git'
             }
         }
+
+        stage('Test') {
+            steps {
+                sh 'gradle test'
+            }
+        }
         
         stage('Build docker image') {
             steps {  
