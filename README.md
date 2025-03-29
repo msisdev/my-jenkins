@@ -91,20 +91,9 @@ jenkins : jenkins docker
 - `sudo systemctl restart jenkins`
 
 
-## 2. Syntax
-```gradle
-pipeline {
-    agent any
-    stages {
-        stage('Stage Name') {
-            steps {
-                // commands
-            }
-        }
-    }
-}
-```
-- `agent`: Where to execute
-- `stages`: stages
-- `stage`: individual stage
-- `steps`: 
+## 2. Jenkinsfile
+
+Currently gradle daemon is not used efficiently.
+- `./gradlew test`: downloads Gradle in Jenkins
+- `RUN ./gradlew build --no-daemon`: downloads Gradle in Docker
+- Solution: test and build in Jenkins, copy only `.jar` in Dockerfile
