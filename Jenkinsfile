@@ -6,13 +6,7 @@ pipeline {
         APP_NAME = "msisdev/my-jenkins"
     }
 
-    stages { 
-        // stage('SCM Checkout') {
-        //     steps {
-        //         git branch: 'master', url: 'https://github.com/msisdev/my-jenkins.git'
-        //     }
-        // }
-
+    stages {
         stage('Test') {
             steps {
                 sh './gradlew test'
