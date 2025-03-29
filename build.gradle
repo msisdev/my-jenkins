@@ -26,3 +26,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+
+jar {
+	enabled = false	// don't build plain jar
+}
