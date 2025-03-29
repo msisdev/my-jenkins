@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('your-docker-credentials')
+        DOCKERHUB_CREDENTIALS = credentials('docker-hub-msisdev')
         APP_NAME = "msisdev/my-jenkins"
     }
 
