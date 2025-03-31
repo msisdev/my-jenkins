@@ -36,6 +36,9 @@ Dashboard > Manage Jenkins > Plugins
 
 Install Docker Pipeline
 
+Start docker service in my computer
+- `sudo systemctl start docker`
+
 ### 1.3. [Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 #### 1.3.1. Create pipeline
 Dashboard > New Item
@@ -77,6 +80,8 @@ Run pipeline.
 18:19:39 Jenkins is attempting to evenly distribute GitHub API requests. To configure a different rate limiting strategy, such as having Jenkins restrict GitHub API requests only when near or above the GitHub rate limit, go to "GitHub API usage" under "Configure System" in the Jenkins settings.
 ```
 
+Wait for 5 min.
+
 #### 1.3.e2. Docker daemon socket permission
 ```
 permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.47/containers/gradle:8.13.0-jdk21-alpine/json": dial unix /var/run/docker.sock: connect: permission denied
@@ -93,6 +98,9 @@ jenkins : jenkins docker
 
 ## 2. Jenkinsfile
 
+Look `jenkinsfile`
+
+### Not Optimized
 Currently gradle daemon is not used efficiently.
 - `./gradlew test`: downloads Gradle in Jenkins
 - `RUN ./gradlew build --no-daemon`: downloads Gradle in Docker
